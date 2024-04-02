@@ -1,0 +1,162 @@
+Index: src/main/webapp/reNameLater.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>function tableBooking(tableNames) {\r\n    displayTablePopupInsteadOfRoom();\r\n\r\n    // Get all office table buttons\r\n    const tableButtons = document.querySelectorAll('.tableButton');\r\n\r\n    // Get the booking popup\r\n    const bookingPopup = document.getElementById('booking-popup');\r\n\r\n    // Show the booking popup on page load\r\n    bookingPopup.style.display = 'block';\r\n\r\n    // Initialize the tableNames variable\r\n    let currentTable = tableNames;\r\n    document.getElementById(\"tableID\").value = tableNames;\r\n    tableIdToForm(currentTable);\r\n    scanTableForBookings(currentTable, null);\r\n    const popupHeading = document.querySelector(\"#popup-Heading\");\r\n    popupHeading.innerHTML = `Bokning av<br>Kontorsplats ${currentTable}`;\r\n\r\n    // Loop through all table buttons and add a click event listener\r\n    tableButtons.forEach(button => {\r\n        button.addEventListener('click', function (event) {\r\n            currentTable = event.target.name;\r\n\r\n            // Show the booking popup\r\n            bookingPopup.style.display = 'block';\r\n\r\n            const popupHeading = document.querySelector(\"#popup-Heading\");\r\n            popupHeading.innerHTML = `Bokning av<br>Kontorsplats ${currentTable}`;\r\n        });\r\n    });\r\n}\r\n\r\nfunction cancelTablePopup() {\r\n    const bookingPopup = document.getElementById('booking-popup');\r\n    // Hide the booking popup\r\n    bookingPopup.style.display = 'none';\r\n}\r\n\r\nfunction roomBooking(roomNames) {\r\n    displayRoomPopupInsteadOfTable();\r\n\r\n    // Get all office room buttons\r\n    const roomButtons = document.querySelectorAll('.roomButtonTop,.roomButtonMiddle,.roomButtonMiddleBottom,.roomButtonBottom');\r\n\r\n    // Get the booking popup\r\n    const roomBookingPopup = document.getElementById('roomBooking-popup');\r\n\r\n    // Show the booking popup on page load\r\n    roomBookingPopup.style.display = 'block';\r\n\r\n    // Initialize the roomNames variable\r\n    let currentRoom = roomNames;\r\n    document.getElementById(\"roomID\").value = roomNames;\r\n    roomIdToForm(currentRoom);\r\n    scanRoomForBookings(null, null, currentRoom, null);\r\n    const roomPopupHeading = document.querySelector(\"#roomPopup-Heading\");\r\n    roomPopupHeading.innerText = `Bokning av Rum ${currentRoom}`;\r\n\r\n    // Loop through all room buttons and add a click event listener\r\n    roomButtons.forEach(button => {\r\n        button.addEventListener('click', function (event) {\r\n            currentRoom = event.target.name;\r\n\r\n            // Show the booking popup\r\n            roomBookingPopup.style.display = 'block';\r\n\r\n            const popupHeading = document.querySelector(\"#roomPopup-Heading\");\r\n            roomPopupHeading.innerText = `Bokning av rum ${currentRoom}`;\r\n        });\r\n    });\r\n\r\n    // Get the validation elements\r\n    const validationMessage = document.getElementById(\"validationMessage\");\r\n    const bookButton = document.getElementById(\"bookButton\");\r\n\r\n    const startTimeInput = document.getElementById('startTimeInput2');\r\n    const endTimeInput = document.getElementById('endTimeInput2');\r\n    let startTime = \"\"; // Declare startTime variable\r\n    let endTime = \"\"; // Declare endTime variable\r\n\r\n    startTimeInput.addEventListener('input', function () {\r\n        startTime = this.value;\r\n        checkBookingTime();\r\n    });\r\n\r\n    endTimeInput.addEventListener('input', function () {\r\n        endTime = this.value;\r\n        checkBookingTime();\r\n    });\r\n}\r\n\r\nfunction cancelRoomPopup() {\r\n    const roomBookingPopup = document.getElementById('roomBooking-popup');\r\n    // Hide the booking popup\r\n    roomBookingPopup.style.display = 'none';\r\n}\r\n\r\nfunction changeTime2(checkbox) {\r\n    const startTimeInput = document.getElementById('startTimeInput2');\r\n    const endTimeInput = document.getElementById('endTimeInput2');\r\n    if (checkbox.checked) {\r\n        startTimeInput.value = '08:00';\r\n        endTimeInput.value = '17:00';\r\n    } else {\r\n        startTimeInput.value = '';\r\n        endTimeInput.value = '';\r\n    }\r\n}\r\n\r\nfunction displayTablePopupInsteadOfRoom() {\r\n    const roomBookingPopup = document.getElementById('roomBooking-popup');\r\n    if (roomBookingPopup.style.display == 'block') {\r\n        roomBookingPopup.style.display = 'none';\r\n    }\r\n}\r\n\r\nfunction displayRoomPopupInsteadOfTable() {\r\n    const bookingPopup = document.getElementById('booking-popup');\r\n    if (bookingPopup.style.display == 'block') {\r\n        bookingPopup.style.display = 'none';\r\n    }\r\n}\r\n\r\nfunction toggleDropdown() {\r\n    var dropdownMenu = document.getElementById(\"dropdownMenu\");\r\n    dropdownMenu.style.display = dropdownMenu.style.display === \"none\" ? \"block\" : \"none\";\r\n}
+===================================================================
+diff --git a/src/main/webapp/reNameLater.js b/src/main/webapp/reNameLater.js
+--- a/src/main/webapp/reNameLater.js	
++++ b/src/main/webapp/reNameLater.js	
+@@ -123,7 +123,49 @@
+     }
+ }
+ 
++var isDropdownVisible = false;
++
+ function toggleDropdown() {
+     var dropdownMenu = document.getElementById("dropdownMenu");
+-    dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+-}
+\ No newline at end of file
++
++    if (!isDropdownVisible) {
++        dropdownMenu.style.display = "block";
++        isDropdownVisible = true;
++    } else {
++        dropdownMenu.style.display = "none";
++        isDropdownVisible = false;
++    }
++}
++
++document.getElementById("toggleDropdown").addEventListener("click", toggleDropdown);
++
++// Visa inloggningsrutan när "Admin" -knappen klickas
++document.querySelector(".admin-button").addEventListener("click", function(e) {
++    e.preventDefault();
++    document.getElementById("login-overlay").style.display = "flex";
++});
++
++// Hantera avbryt-knappen
++document.getElementById("cancel-button").addEventListener("click", function(e) {
++    e.preventDefault();
++    document.getElementById("login-overlay").style.display = "none";
++});
++
++// Hantera inloggningen när inloggningsformuläret skickas
++document.getElementById("admin-login-form").addEventListener("submit", function(e) {
++    e.preventDefault();
++
++    var username = document.getElementById("admin-username").value;
++    var password = document.getElementById("admin-password").value;
++
++    // Gör en serverförfrågan för att kontrollera användarnamn och lösenord
++    // Du behöver implementera en serverfunktion som hanterar inloggningskontrollen
++
++    // Om inloggningen lyckas, skicka användaren till adminsidan
++    // Du kan ändra "adminPage.html" till den sida du vill skicka användaren till
++    if (username === "admin" && password === "password") {
++        window.location.href = "adminPage?";
++    } else {
++        alert("Fel användarnamn eller lösenord!");
++    }
++});
+Index: src/main/webapp/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.body {\r\n    background-color: black;\r\n    padding: 0;\r\n    margin: 0;\r\n    height: 100%;\r\n    font-family: \"Tietoevry Sans 1 Thin\";\r\n}\r\n\r\n.banner {\r\n    background: #280071;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 4vh; /* 6% of viewport height */\r\n    position: fixed;\r\n    padding: 0.75vh 0 0.375vh;\r\n    z-index: 4;\r\n}\r\n\r\n.logo {\r\n    width: 6vw;\r\n    position: absolute;\r\n    left: 2.3vw;\r\n    top: 50%;\r\n    transform: translateY(-50%);\r\n    z-index: 5;\r\n}\r\n.menuIcon{\r\n    width: 2vw;\r\n    height: 2vw;\r\n    top: 5%;\r\n    left: 6%;\r\n    position: relative;\r\n}\r\n\r\n#mapTextLayout{\r\n    top: 0%;\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.mapText{\r\n    color: white;\r\n    z-index: 3\r\n}\r\n\r\n#toilet1{\r\n    position: absolute;\r\n    top: 62.5%;\r\n    left: 26.8%;\r\n}\r\n\r\n#toilet2{\r\n     position: absolute;\r\n     top: 41.5%;\r\n     left: 29%;\r\n }\r\n\r\n#kapprum{\r\n      position: absolute;\r\n      top: 71%;\r\n      left: 26%;\r\n}\r\n\r\n#reception1{\r\n       position: absolute;\r\n       top: 48.5%;\r\n       left: 19%;\r\n       font-weight: bold;\r\n       color: black;\r\n       font-size: 123%;\r\n}\r\n\r\n#reception2{\r\n        position: absolute;\r\n        top: 20%;\r\n        left: 21%;\r\n        font-size: 123%;\r\n        transform: rotate(270deg);\r\n        color: black;\r\n        font-weight: bold;\r\n}\r\n\r\n#skrivarrum{\r\n         position: absolute;\r\n         top: 31.6%;\r\n         left: 34.5%;\r\n         transform: rotate(315deg);\r\n}\r\n\r\n#tystarum{\r\n          position: absolute;\r\n          top: 47%;\r\n          left: 51%;\r\n          transform: rotate(270deg);\r\n}\r\n\r\n#städ{\r\n           position: absolute;\r\n           top: 31.2%;\r\n           left: 57.8%;\r\n}\r\n\r\n#trapphus{\r\n            position: absolute;\r\n            top: 43.5%;\r\n            left: 57%;\r\n}\r\n\r\n#kök{\r\n             position: absolute;\r\n             top: 72%;\r\n             left: 53%;\r\n             font-size: 180%;\r\n}\r\n\r\n#uteplats{\r\n              position: absolute;\r\n              top: 90%;\r\n              left: 51%;\r\n}\r\n\r\n@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5),\r\nonly screen and (min-width: 768px) and (min-resolution: 144dpi) {\r\n    /* adjust the banner and logo size for high-density screens */\r\n    .banner {\r\n        height: calc(10vh / 1.5); /* 10% of viewport height divided by 1.5 */\r\n        padding: calc(1vh / 1.5) 0 calc(0.5vh / 1.5);\r\n    }\r\n\r\n    .logo {\r\n        width: calc(10vw / 1.5); /* 10% of viewport width divided by 1.5 */\r\n    }\r\n\r\n    .tableButton{\r\n        height: calc(10vw / 1.5); /* 10% of viewport width divided by 1.5 */\r\n        width: calc(10vw / 1.5) ; /* 10% of viewport width divided by 1.5 */\r\n    }\r\n\r\n    #dateInput,#dateInput2{\r\n        margin: 10% 0% 0% 1% !important;\r\n        font-size: 75% !important;\r\n    }\r\n\r\n    #brID,#brID2,#roomBrID, #roomBrID2{\r\n        display: none !important;\r\n    }\r\n\r\n    #startTimeInput,#endTimeInput,#startTimeInput2, #endTimeInput2{\r\n        font-size: 65% !important;\r\n    }\r\n\r\n    #wholeDayLabel, #wholeDayLabel2{\r\n        font-size: 75% !important;\r\n    }\r\n\r\n    #startTimeID, #startTimeID2{\r\n        font-size: 75% !important;\r\n        padding-right: 14% !important;\r\n    }\r\n    #endTimeID, #endTimeID2{\r\n        font-size: 75% !important;\r\n    }\r\n\r\n    #dateLabel, #dateLabel2{\r\n        font-size: 75% !important;\r\n    }\r\n\r\n    #popup-Heading {\r\n        font-size: 85% !important;\r\n    }\r\n\r\n    #roomPopup-Heading{\r\n        font-size: 95% !important;\r\n    }\r\n\r\n    .layout {\r\n        transform: scale(0.95);\r\n        position: absolute !important;\r\n        top: -2% !important;\r\n    }\r\n    #id28 {\r\n        position: absolute!important;\r\n        top: 35.99%!important;\r\n        left: 41.95%!important;\r\n    }\r\n\r\n    #id29 {\r\n        position: absolute!important;\r\n        top: 34.5% !important;\r\n        left: 42.66%!important;\r\n    }\r\n\r\n    #id30 {\r\n        position: absolute!important;\r\n        top: 38.82%!important;\r\n        left: 43.3%!important;\r\n    }\r\n\r\n    #id31 {\r\n        position: absolute!important;\r\n        top: 37.34%!important;\r\n        left: 43.99%!important;\r\n    }\r\n\r\n    #id32 {\r\n        position: absolute!important;\r\n        top: 43.1%!important;\r\n        left: 38.49%!important;\r\n    }\r\n\r\n    #id33 {\r\n        position: absolute!important;\r\n        top: 41.7%!important;\r\n        left: 39.15%!important;\r\n    }\r\n\r\n    #id34 {\r\n        position: absolute!important;\r\n        top: 45.99%!important;\r\n        left: 39.84%!important;\r\n    }\r\n\r\n    #id35 {\r\n        position: absolute!important;\r\n        top: 44.57%!important;\r\n        left: 40.55%!important;\r\n    }\r\n\r\n    .booking,.cancel{\r\n        font-size: 75% !important;\r\n    }\r\n    #mapTextLayout{\r\n        font-size: 72%;\r\n        width: 100%;\r\n        height: 97%;\r\n    }\r\n\r\n    .map{\r\n        width: 68%;\r\n        padding: 0% 0% 0% 0% ;\r\n        margin: 0% 0% 0% 0%;\r\n    }\r\n\r\n    #kapprum{\r\n        top:74%;\r\n        left: 26%;\r\n    }\r\n\r\n    #städ{\r\n        top: 32.4%;\r\n    }\r\n    #tystarum{\r\n        left: 50.7%;\r\n        top: 49%;\r\n    }\r\n    #uteplats{\r\n        top: 93.5%;\r\n    }\r\n    #skrivarrum{\r\n        top: 32.5%;\r\n        left: 34.5%;\r\n    }\r\n    #trapphus{\r\n        left: 56.7%;\r\n        top: 45%;\r\n    }\r\n    #toilet1{\r\n        top: 64.5%;\r\n    }\r\n    #toilet2{\r\n        top: 43%;\r\n        left: 29.2%;\r\n    }\r\n    #reception1{\r\n        top:50%;\r\n    }\r\n    #reception2{\r\n        top: 21%;\r\n    }\r\n    #kök{\r\n        top: 73%;\r\n    }\r\n}\r\n\r\n\r\n\r\n.layout{\r\n    top: 0%;\r\n    position: absolute;\r\n}\r\n\r\n.karta{\r\n    top: 0%;\r\n    left: 0%;\r\n    position: relative;\r\n    z-index: 2;\r\n}\r\n\r\n\r\n.background{\r\n    filter: blur(8px);\r\n    object-fit: cover;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: -1;\r\n}\r\n\r\n.popup{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #26222e;\r\n    border-radius: 5%;\r\n    top: 10%;\r\n    left: 1%;\r\n    width: 13%;\r\n    height: 44%;\r\n    text-align: left;\r\n    padding-left: 0.5%;\r\n    position: absolute;\r\n    color: white;\r\n    border: 5px solid black;\r\n    z-index: 2;\r\n    overflow: auto;\r\n}\r\n\r\n.roomPopup{\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: #26222e;\r\n    border-radius: 5%;\r\n    top: 10%;\r\n    left: 0.5%;\r\n    width: 14%;\r\n    height: 77%;\r\n    text-align: left;\r\n    padding-left: 0.5%;\r\n    position: absolute;\r\n    color: white;\r\n    border: 5px solid black;\r\n    z-index: 4;\r\n    overflow: auto;\r\n}\r\n\r\n#popup-heading, #roomPopup-Heading {\r\n    font-size: 150%;\r\n}\r\n\r\n#startTimeID,#startTimeID2{\r\n    padding-right: 18%;\r\n}\r\n#startTimeInput,#startTimeInput2{\r\n    width: 41%;\r\n}\r\n\r\n#dateInput,#dateInput2{\r\n    margin: 10% 0% 0% 4%;\r\n    width: 58%;\r\n}\r\n\r\n#endTimeInput,#endTimeInput2{\r\n    margin: 0% 0% 0% 2%;\r\n    width: 41%;\r\n}\r\n\r\n.booking{\r\n    top: 86%;\r\n    left: 15%;\r\n    position: absolute;\r\n    width: 30%;\r\n    height: 8%;\r\n    background: #a6a8e9;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0%;\r\n    margin: 0;\r\n    margin-top: 3%;\r\n    margin-bottom: 3%;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    letter-spacing: 1px;\r\n    transition: background-color 0.3s ease-out;\r\n    z-index: 4;\r\n}\r\n\r\n.cancel{\r\n    top: 86%;\r\n    left: 55%;\r\n    position: absolute;\r\n    width: 30%;\r\n    height: 8%;\r\n    background: #a6a8e9;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0%;\r\n    margin: 0;\r\n    margin-top: 3%;\r\n    margin-bottom: 3%;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    letter-spacing: 1px;\r\n    transition: background-color 0.3s ease-out;\r\n    z-index: 4;\r\n}\r\n\r\n.booking2{\r\n    top: 93%;\r\n    left: 15%;\r\n    position: absolute;\r\n    width: 31%;\r\n    height: 4%;\r\n    background: #a6a8e9;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0%;\r\n    margin: 0;\r\n    margin-top: 3%;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    letter-spacing: 1px;\r\n    transition: background-color 0.3s ease-out;\r\n    z-index: 4;\r\n}\r\n\r\n.cancel2{\r\n    top: 93%;\r\n    left: 55%;\r\n    position: absolute;\r\n    width: 30%;\r\n    height: 4%;\r\n    background: #a6a8e9;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0%;\r\n    margin: 0;\r\n    margin-top: 3%;\r\n    margin-bottom: 3%;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    letter-spacing: 1px;\r\n    transition: background-color 0.3s ease-out;\r\n    z-index: 4;\r\n}\r\n\r\n.roomButtonTop {\r\n    background: #186ae3;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    letter-spacing: 1px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\r\n    transition: background-color 0.3s ease-out;\r\n}\r\n\r\n.roomButtonTop:hover {\r\n    opacity: 90%;\r\n    background-color: white;\r\n}\r\n\r\n.roomButtonTop:active{\r\n    background-color:  #280071;\r\n}\r\n\r\n#roomId1{\r\n    width: 2.2%;\r\n    height: 6%;\r\n    top: 10.3%;\r\n    left: 41.6%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#roomId2{\r\n    width: 2.2%;\r\n    height: 5.8%;\r\n    top: 16.8%;\r\n    left: 41.6%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n.roomButtonMiddle {\r\n    background-color: #ef5621;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    letter-spacing: 1px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\r\n    transition: background-color 0.3s ease-out;\r\n}\r\n\r\n.roomButtonMiddle:hover {\r\n    opacity: 90%;\r\n    background-color: white;\r\n}\r\n\r\n.roomButtonmiddle:active{\r\n    background-color:  #280071;\r\n}\r\n\r\n#roomId3{\r\n    width: 3.4%;\r\n    height: 5.5%;\r\n    top: 26.3%;\r\n    left: 28%;\r\n    position: absolute;\r\n    z-index: 4;\r\n    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 35%, 70% 0);\r\n}\r\n\r\n#roomId4{\r\n    width: 3.4%;\r\n    height: 5.9%;\r\n    top: 32.3%;\r\n    left: 28%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n.roomButtonMiddleBottom {\r\n    background-color: #609a3b;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    letter-spacing: 1px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\r\n    transition: background-color 0.3s ease-out;\r\n}\r\n\r\n.roomButtonMiddleBottom:hover {\r\n    opacity: 90%;\r\n    background-color: white;\r\n}\r\n\r\n.roomButtonMiddleBottom:active{\r\n    background-color:  #280071;\r\n}\r\n\r\n#roomId5{\r\n    width: 4.8%;\r\n    height: 5.39%;\r\n    top: 67.8%;\r\n    left: 35.05%;\r\n    position: absolute;\r\n    z-index: 4;\r\n    clip-path: polygon(0% 0%, 0% 70%, 16% 100%, 85% 100%, 132% 0%);\r\n}\r\n\r\n.roomButtonBottom {\r\n    background-color: #4fa9bd;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    letter-spacing: 1px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\r\n    transition: background-color 0.3s ease-out;\r\n}\r\n\r\n.roomButtonBottom:hover {\r\n    opacity: 90%;\r\n    background-color: white;\r\n}\r\n\r\n.roomButtonBottom:active{\r\n    background-color:  #280071;\r\n}\r\n\r\n#roomId6{\r\n    width: 4.1%;\r\n    height: 6%;\r\n    top: 81%;\r\n    left: 23.7%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#roomId7{\r\n    width: 4%;\r\n    height: 6%;\r\n    top: 81%;\r\n    left: 28.1%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#roomId8{\r\n    width: 2.8%;\r\n    height: 6%;\r\n    top: 81%;\r\n    left: 32.4%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n\r\n.tableButton {\r\n    width: 0.9%;\r\n    height: 3.8%;\r\n    background: #a6a8e9;\r\n    opacity: 100%;\r\n    border: none;\r\n    font: inherit;\r\n    padding: 0;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    display: block;\r\n    color: black;\r\n    border-radius: 2px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n    letter-spacing: 1px;\r\n    transition: background-color 0.3s ease-out;\r\n}\r\n\r\n.tableButton:hover {\r\n    opacity: 90%;\r\n    background-color: white;\r\n}\r\n.tableButton:active{\r\n    background-color:  #280071;\r\n}\r\n\r\n#id1 {\r\n    top: 10.6%;\r\n    left: 25.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id2 {\r\n    top: 10.6%;\r\n    left: 26.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n\r\n}\r\n\r\n#id3 {\r\n    top: 14.7%;\r\n    left: 25.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id4 {\r\n    top: 14.7%;\r\n    left: 26.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id5 {\r\n    top: 10.6%;\r\n    left: 31.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id6 {\r\n    top: 10.6%;\r\n    left: 32.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id7 {\r\n    top: 14.7%;\r\n    left: 31.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id8 {\r\n    top: 14.7%;\r\n    left: 32.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id9 {\r\n    top: 10.6%;\r\n    left: 36.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id10 {\r\n    top: 10.6%;\r\n    left: 37.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id11 {\r\n    top: 14.7%;\r\n    left: 36.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id12 {\r\n    top: 10.6%;\r\n    left: 46.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id13 {\r\n    top: 10.6%;\r\n    left: 47.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id14 {\r\n    top: 14.7%;\r\n    left: 46.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id15 {\r\n    top: 14.7%;\r\n    left: 47.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id16 {\r\n    top: 10.6%;\r\n    left: 51.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id17 {\r\n    top: 10.6%;\r\n    left: 52.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id18 {\r\n    top: 14.7%;\r\n    left: 51.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id19 {\r\n    top: 14.7%;\r\n    left: 52.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id20 {\r\n    top: 10.6%;\r\n    left: 56.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id21 {\r\n    top: 10.6%;\r\n    left: 57.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id22 {\r\n    top: 14.7%;\r\n    left: 56.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id23 {\r\n    top: 14.7%;\r\n    left: 57.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id24 {\r\n    top: 30%;\r\n    left: 50.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id25 {\r\n    top: 30%;\r\n    left: 51.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id26 {\r\n    top: 34%;\r\n    left: 50.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id27 {\r\n    top: 34%;\r\n    left: 51.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n#id28 {\r\n    top: 35.99%;\r\n    left: 41.95%;\r\n    position: absolute;\r\n    transform: rotate(135deg);\r\n    z-index: 4;\r\n}\r\n\r\n#id29 {\r\n    top: 34.6%;\r\n    left: 42.59%;\r\n    position: absolute;\r\n    transform: rotate(135deg);\r\n    z-index: 4;\r\n}\r\n\r\n#id30 {\r\n    top: 38.82%;\r\n    left: 43.3%;\r\n    position: absolute;\r\n    transform: rotate(135deg);\r\n    z-index: 4;\r\n}\r\n\r\n#id31 {\r\n    top: 37.4%;\r\n    left: 43.96%;\r\n    position: absolute;\r\n    transform: rotate(135deg);\r\n    z-index: 4;\r\n}\r\n\r\n\r\n#id32 {\r\n    top: 43.1%;\r\n    left: 38.49%;\r\n    position: absolute;\r\n    rotate: 135deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id33 {\r\n    top: 41.7%;\r\n    left: 39.18%;\r\n    position: absolute;\r\n    rotate: 135deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id34 {\r\n    top: 45.9%;\r\n    left: 39.82%;\r\n    position: absolute;\r\n    rotate: 135deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id35 {\r\n    top: 44.5%;\r\n    left: 40.5%;\r\n    position: absolute;\r\n    rotate: 135deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id36 {\r\n    top: 55.5%;\r\n    left: 36.09%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id37 {\r\n    top: 55.5%;\r\n    left: 38%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id38 {\r\n    top: 57.5%;\r\n    left: 36.09%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id39 {\r\n    top: 57.5%;\r\n    left: 38%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 2;\r\n}\r\n\r\n#id40 {\r\n    top: 57.4%;\r\n    left: 17.5%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id41 {\r\n    top: 57.4%;\r\n    left: 19.45%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id42 {\r\n    top: 59.5%;\r\n    left: 17.5%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id43 {\r\n    top: 59.5%;\r\n    left: 19.45%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id44 {\r\n    top: 67.5%;\r\n    left: 17.5%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id45 {\r\n    top: 67.5%;\r\n    left: 19.45%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n\r\n#id46 {\r\n    top: 69.5%;\r\n    left: 17.5%;\r\n    position: absolute;\r\n    rotate: 90deg;\r\n    z-index: 4;\r\n}\r\n#id47 {\r\n    top: 69.5%;\r\n    left: 19.45%;\r\n    position: absolute;\r\n    transform: rotate(90deg);\r\n    z-index: 4;\r\n}\r\n#id48 {\r\n    top: 77.5%;\r\n    left: 17.5%;\r\n    position: absolute;\r\n    transform: rotate(90deg);\r\n    z-index: 4;\r\n}\r\n#id49 {\r\n    top: 77.5%;\r\n    left: 19.45%;\r\n    position: absolute;\r\n    transform: rotate(90deg);\r\n    z-index: 4;\r\n}\r\n#id50 {\r\n    top: 79.5%;\r\n    left: 17.5%;\r\n    position: absolute;\r\n    transform: rotate(90deg);\r\n    z-index: 4;\r\n}\r\n#id51 {\r\n    top: 79.5%;\r\n    left: 19.45%;\r\n    position: absolute;\r\n    transform: rotate(90deg);\r\n    z-index: 4;\r\n}\r\n\r\n#id52 {\r\n    top: 78%;\r\n    left: 38%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id53 {\r\n    top: 78%;\r\n    left: 39%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id54 {\r\n    top: 82%;\r\n    left: 38%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id55 {\r\n    top: 82%;\r\n    left: 39%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id56 {\r\n    top: 68%;\r\n    left: 42.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id57 {\r\n    top: 68%;\r\n    left: 43.5%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id58 {\r\n    top: 78%;\r\n    left: 43%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id59 {\r\n    top: 78%;\r\n    left: 44%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id60 {\r\n    top: 82%;\r\n    left: 43%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n#id61 {\r\n    top: 82%;\r\n    left: 44%;\r\n    position: absolute;\r\n    z-index: 4;\r\n}\r\n\r\n.dropdown {\r\n    position: absolute;\r\n    display: inline-block;\r\n    z-index: 7;\r\n    width: 10%;\r\n    height: 99.2%;\r\n}\r\n\r\n.dropdown-toggle {\r\n    cursor: pointer;\r\n    width: 21%;\r\n    height: 4.8%;\r\n}\r\n\r\n.dropdown-menu {\r\n    position: absolute;\r\n    top: 5.2%;\r\n    width: 100%;\r\n    height: 95.6%;\r\n    background-color: #26222e;\r\n    display: none;\r\n}\r\n\r\n.admin-button,\r\n.help-button {\r\n    display: block;\r\n    width: 61%;\r\n    padding: 5px;\r\n    margin: 31px;\r\n}\r\n\r\n.admin-button:hover,\r\n.help-button:hover {\r\n    background-color: rgba(12, 22, 206, 0.44);\r\n}\r\n
+===================================================================
+diff --git a/src/main/webapp/style.css b/src/main/webapp/style.css
+--- a/src/main/webapp/style.css	
++++ b/src/main/webapp/style.css	
+@@ -25,13 +25,6 @@
+     transform: translateY(-50%);
+     z-index: 5;
+ }
+-.menuIcon{
+-    width: 2vw;
+-    height: 2vw;
+-    top: 5%;
+-    left: 6%;
+-    position: relative;
+-}
+ 
+ #mapTextLayout{
+     top: 0%;
+@@ -1125,6 +1118,14 @@
+     z-index: 4;
+ }
+ 
++.menuIcon{
++    width: 2vw;
++    height: 1.5vw;
++    top: 23%;
++    left: 6%;
++    position: relative;
++}
++
+ .dropdown {
+     position: absolute;
+     display: inline-block;
+@@ -1154,9 +1155,63 @@
+     width: 61%;
+     padding: 5px;
+     margin: 31px;
++    background-color: #eacbbb;
+ }
+ 
+ .admin-button:hover,
+ .help-button:hover {
+     background-color: rgba(12, 22, 206, 0.44);
++    color: #EEEEEE;
++}
++
++.overlay {
++    position: fixed;
++    top: 0;
++    left: 0;
++    width: 100%;
++    height: 100%;
++    background-color: rgba(0, 0, 0, 0.5);
++    display: flex;
++    justify-content: center;
++    align-items: center;
++    z-index: 88;
++}
++
++.login-box {
++    background-color: white;
++    padding: 20px;
++    border-radius: 5px;
++    z-index: 88;
++}
++
++.login-box h2 {
++    text-align: center;
++    margin-bottom: 10px;
++    z-index: 88;
++}
++
++.login-box input {
++    width: 95%;
++    padding: 10px;
++    margin-bottom: 10px;
++    z-index: 88;
+ }
++
++.login-box .button-container {
++    display: flex;
++    justify-content: space-between;
++    margin-top: 10px;
++    z-index: 88;
++}
++
++.login-box button {
++    width: 48%;
++    padding: 10px;
++    background-color: #4CAF50;
++    color: white;
++    border: none;
++    border-radius: 5px;
++    cursor: pointer;
++    z-index: 88;
++}
++

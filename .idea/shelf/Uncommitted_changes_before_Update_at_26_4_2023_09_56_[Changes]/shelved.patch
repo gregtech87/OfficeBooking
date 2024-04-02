@@ -1,0 +1,688 @@
+Index: src/main/webapp/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/style.css b/src/main/webapp/style.css
+new file mode 100644
+--- /dev/null	(date 1682495802993)
++++ b/src/main/webapp/style.css	(date 1682495802993)
+@@ -0,0 +1,677 @@
++.body {
++    background: #280071;
++}
++
++.testButton {
++    top: 680px;
++    left: 987px;
++    width: 67px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: orange;
++    opacity: 100%;
++}
++
++.testButton:hover {
++    opacity: 100%;
++    background-color: white;
++}
++
++
++.tableButton1 {
++    top: 101px;
++    left: 487px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton2 {
++    top: 101px;
++    left: 506px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton3 {
++    top: 139px;
++    left: 487px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton4 {
++    top: 139px;
++    left: 506px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton5 {
++    top: 101px;
++    left: 593px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton6 {
++    top: 101px;
++    left: 611px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton7 {
++    top: 139px;
++    left: 593px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton8 {
++    top: 139px;
++    left: 611px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton9 {
++    top: 101px;
++    left: 684px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton10 {
++    top: 101px;
++    left: 703px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton11 {
++    top: 139px;
++    left: 684px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton12 {
++    top: 101px;
++    left: 837px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton13 {
++    top: 101px;
++    left: 856px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton14 {
++    top: 139px;
++    left: 837px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton15 {
++    top: 139px;
++    left: 856px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton16 {
++    top: 101px;
++    left: 943px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton17 {
++    top: 101px;
++    left: 962px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton18 {
++    top: 139px;
++    left: 943px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton19 {
++    top: 139px;
++    left: 962px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton20 {
++    top: 101px;
++    left: 1047px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton21 {
++    top: 101px;
++    left: 1066px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton22 {
++    top: 139px;
++    left: 1047px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton23 {
++    top: 139px;
++    left: 1066px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton24 {
++    top: 262px;
++    left: 897px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton25 {
++    top: 262px;
++    left: 916px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton26 {
++    top: 300px;
++    left: 897px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton27 {
++    top: 300px;
++    left: 916px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton28 {
++    top: 312px;
++    left: 762px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton29 {
++    top: 298px;
++    left: 775px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton30 {
++    top: 339px;
++    left: 789px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton31 {
++    top: 325px;
++    left: 803px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton32 {
++    top: 389px;
++    left: 685px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton33 {
++    top: 375px;
++    left: 698px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton34 {
++    top: 416px;
++    left: 712px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton35 {
++    top: 402px;
++    left: 726px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    rotate: 135deg;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton36 {
++    top: 516px;
++    left: 648px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton37 {
++    top: 516px;
++    left: 686px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton38 {
++    top: 535px;
++    left: 648px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++
++.tableButton39 {
++    top: 535px;
++    left: 686px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton40 {
++    top: 498px;
++    left: 316px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton41 {
++    top: 498px;
++    left: 354px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton42 {
++    top: 517px;
++    left: 316px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton43 {
++    top: 517px;
++    left: 354px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton44 {
++    top: 598px;
++    left: 316px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton45 {
++    top: 598px;
++    left: 354px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton46 {
++    top: 617px;
++    left: 316px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton47 {
++    top: 617px;
++    left: 354px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton48 {
++    top: 698px;
++    left: 316px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton49 {
++    top: 698px;
++    left: 354px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton50 {
++    top: 717px;
++    left: 316px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton51 {
++    top: 717px;
++    left: 354px;
++    width: 36px;
++    height: 17px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton52 {
++    top: 605px;
++    left: 782px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton53 {
++    top: 605px;
++    left: 801px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton54 {
++    top: 688px;
++    left: 682px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton55 {
++    top: 688px;
++    left: 701px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton56 {
++    top: 726px;
++    left: 682px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton57 {
++    top: 726px;
++    left: 701px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton58 {
++    top: 688px;
++    left: 782px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton59 {
++    top: 688px;
++    left: 801px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton60 {
++    top: 726px;
++    left: 782px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
++.tableButton61 {
++    top: 726px;
++    left: 801px;
++    width: 17px;
++    height: 36px;
++    position: absolute;
++    z-index: 2;
++    background: #a6a8e9;
++    opacity: 100%;
++}
+\ No newline at end of file

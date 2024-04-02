@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SeatingChartBooking:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8f271c7-01ca-4733-852f-489e777714f8" name="Changes" comment="all datahantering inter ÄNTLIGEN!!" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tobbe2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="basic crud" />
+        <option name="rewordedMessage" value="Admin sida med fungerande crud." />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="b1bcf69328b4c5ca34fe4896ab3d533d0d9625e6" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f6b5a459-244b-4236-9b28-216b8db1caf0" />
+        <option name="url" value="https://github.com/sebbeF-Tieto/SeatingChartBooking.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="JavaeeView">
+    <option name="showModules" value="false" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ObLHl52E3n9dBkp7QRBGDFVzRe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Beast/IdeaProjects/SeatingChartBooking",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "DockerRegistry",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.seatingchartbooking" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Beast\IdeaProjects\SeatingChartBooking\target\SeatingChartBooking-1.0-SNAPSHOT\WEB-INF\classes\META-INF" />
+      <recent name="C:\Users\Beast\IdeaProjects\SeatingChartBooking\src\main\resources" />
+      <recent name="C:\Users\xxgregot\IdeaProjects\SeatingChartBooking\src\main\resources" />
+      <recent name="C:\Users\xxgregot\IdeaProjects\SeatingChartBooking\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Beast\IdeaProjects\SeatingChartBooking\target\SeatingChartBooking-1.0-SNAPSHOT\WEB-INF\classes" />
+      <recent name="C:\Users\xxgregot\IdeaProjects\SeatingChartBooking\src\main\webapp" />
+      <recent name="C:\Users\Beast\IdeaProjects\SeatingChartBooking\src\main\webapp\jsons" />
+      <recent name="C:\Users\Beast\IdeaProjects\SeatingChartBooking\src\main\webapp\scriptFiles" />
+      <recent name="C:\Users\Beast\IdeaProjects\SeatingChartBooking\src\main\webapp\styleSheets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.seatingchartbooking" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.uggabugga">
+    <configuration name="GlassFish 7.0.3" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.3" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="20" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="SeatingChartBooking:war exploded">
+          <settings>
+            <option name="defaultContextRoot" value="false" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="SeatingChartBooking:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="GlassFish" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51095" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Docker 1uuyytt" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="bju:latest" />
+          <option name="containerName" value="bjutt" />
+          <option name="publishAllPorts" value="true" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image (1)" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="officebooking:1.0" />
+          <option name="containerName" value="bbbbbb" />
+          <option name="publishAllPorts" value="true" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="aaaaaaaaa:latest" />
+          <option name="containerName" value="klar" />
+          <option name="publishAllPorts" value="true" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="uggabugga" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="test:1.2" />
+          <option name="containerName" value="test" />
+          <option name="publishAllPorts" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.uggabugga" />
+      <item itemvalue="Docker.Docker 1uuyytt" />
+      <item itemvalue="Docker.Docker Image" />
+      <item itemvalue="Docker.Docker Image (1)" />
+      <item itemvalue="GlassFish Server.GlassFish 7.0.3" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Docker 1uuyytt" />
+        <item itemvalue="Docker.Docker Image (1)" />
+        <item itemvalue="Docker.Docker Image" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8f271c7-01ca-4733-852f-489e777714f8" name="Changes" comment="" />
+      <created>1681824255193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681824255193</updated>
+      <workItem from="1681824256197" duration="145000" />
+      <workItem from="1681825607877" duration="142000" />
+      <workItem from="1681891896141" duration="389000" />
+      <workItem from="1682579416252" duration="19368000" />
+      <workItem from="1682664337833" duration="15683000" />
+      <workItem from="1683182459661" duration="16225000" />
+      <workItem from="1683286270130" duration="413000" />
+      <workItem from="1683535550104" duration="1525000" />
+      <workItem from="1683539516224" duration="333000" />
+      <workItem from="1683540089293" duration="28188000" />
+      <workItem from="1683636769986" duration="15322000" />
+      <workItem from="1684226558413" duration="7367000" />
+      <workItem from="1684824265683" duration="8177000" />
+      <workItem from="1685088193691" duration="1906000" />
+      <workItem from="1685344433805" duration="2898000" />
+      <workItem from="1685434882269" duration="15219000" />
+      <workItem from="1685561990480" duration="1652000" />
+      <workItem from="1685601880706" duration="7655000" />
+      <workItem from="1685738751329" duration="480000" />
+      <workItem from="1685952020318" duration="8655000" />
+      <workItem from="1686223417669" duration="9251000" />
+      <workItem from="1686301518123" duration="1371000" />
+      <workItem from="1686395943237" duration="774000" />
+      <workItem from="1686413299479" duration="3018000" />
+      <workItem from="1686559766381" duration="5763000" />
+      <workItem from="1686745253979" duration="1308000" />
+      <workItem from="1686746592878" duration="4419000" />
+      <workItem from="1687303424594" duration="1912000" />
+      <workItem from="1687337648794" duration="7577000" />
+      <workItem from="1687345584376" duration="13894000" />
+      <workItem from="1688073187800" duration="229000" />
+      <workItem from="1689100419386" duration="33000" />
+      <workItem from="1694373976130" duration="952000" />
+      <workItem from="1694594245873" duration="135000" />
+      <workItem from="1702676392263" duration="1322000" />
+      <workItem from="1703540396063" duration="872000" />
+      <workItem from="1708070973576" duration="19000" />
+      <workItem from="1712092765756" duration="934000" />
+      <workItem from="1712093778766" duration="115000" />
+    </task>
+    <task id="LOCAL-00001" summary="bye bye">
+      <created>1681826189770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681826189770</updated>
+    </task>
+    <task id="LOCAL-00002" summary="bye bye">
+      <created>1681826239939</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681826239939</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bye bye">
+      <created>1681826351381</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681826351381</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Merge remote-tracking branch 'origin/master'">
+      <created>1681891628083</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1681891628083</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test rickard">
+      <created>1682495958092</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682495958092</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test rickard">
+      <created>1682509652901</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682509652901</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ny style på knappar och mer style på popup">
+      <created>1682517964131</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682517964131</updated>
+    </task>
+    <task id="LOCAL-00008" summary="alla bord har popup">
+      <created>1682584718738</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682584718738</updated>
+    </task>
+    <task id="LOCAL-00009" summary="borttagning av onödig kod och namn sättning mot bord">
+      <created>1682594577893</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682594577893</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix av knappar och tilläg av datum och tid på popup">
+      <created>1682604714301</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682604714301</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix av knappar och tilläg av datum och tid på popup">
+      <created>1682604840843</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682604840843</updated>
+    </task>
+    <task id="LOCAL-00012" summary="lagt till rum och popup för rummen">
+      <created>1682684098315</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682684098315</updated>
+    </task>
+    <task id="LOCAL−00013" summary="favicon tillbaka">
+      <created>1683120585411</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1683120585411</updated>
+    </task>
+    <task id="LOCAL−00014" summary="aaaa2">
+      <created>1683641154601</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1683641154601</updated>
+    </task>
+    <task id="LOCAL−00015" summary="fått bort &quot;SeatingChartBooking-1.0-SNAPSHOT/&quot; från adressen.">
+      <created>1683877273979</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1683877273979</updated>
+    </task>
+    <task id="LOCAL−00016" summary="JSON till Javascript och utskrivet i HTML consol.">
+      <created>1684156548130</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1684156548130</updated>
+    </task>
+    <task id="LOCAL−00017" summary="JSON till Javascript och utskrivet i HTML consol.2">
+      <created>1684156733877</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1684156733877</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Ny Json med fasta platser(vissa frågetecken kvar)">
+      <created>1684235258005</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1684235258005</updated>
+    </task>
+    <task id="LOCAL−00019" summary="stavfel">
+      <created>1684235630992</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1684235630992</updated>
+    </task>
+    <task id="LOCAL−00020" summary="bokningsdata visas korrekt">
+      <created>1684447168425</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1684447168425</updated>
+    </task>
+    <task id="LOCAL−00021" summary="Förmiddag har ö igen, bakgrunden fixad">
+      <created>1685435344313</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1685435344313</updated>
+    </task>
+    <task id="LOCAL−00022" summary="basic crud">
+      <created>1685604375327</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1685604375327</updated>
+    </task>
+    <task id="LOCAL−00023" summary="ännu bättre crud">
+      <created>1685621175658</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1685621175658</updated>
+    </task>
+    <task id="LOCAL−00024" summary="ännu ännu bättre crud">
+      <created>1685621725247</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1685621725247</updated>
+    </task>
+    <task id="LOCAL−00025" summary="über crud">
+      <created>1685640012482</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1685640012482</updated>
+    </task>
+    <task id="LOCAL−00026" summary="Korrupta bokningar loggas + error meddelande när man bokar fel.">
+      <created>1685709457373</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1685709457373</updated>
+    </task>
+    <task id="LOCAL−00027" summary="småfix">
+      <created>1686140400756</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1686140400756</updated>
+    </task>
+    <task id="LOCAL−00028" summary="prutt">
+      <created>1686299715744</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1686299715744</updated>
+    </task>
+    <task id="LOCAL−00029" summary="lite småskit">
+      <created>1686302008412</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1686302008412</updated>
+    </task>
+    <task id="LOCAL−00030" summary="all datahantering inter ÄNTLIGEN!!">
+      <created>1686773167231</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1686773167231</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="ny style på knappar och mer style på popup" />
+    <MESSAGE value="alla bord har popup" />
+    <MESSAGE value="borttagning av onödig kod och namn sättning mot bord" />
+    <MESSAGE value="fix av knappar och tilläg av datum och tid på popup" />
+    <MESSAGE value="lagt till rum och popup för rummen" />
+    <MESSAGE value="favicon tillbaka" />
+    <MESSAGE value="Bord går att spara till JSON fil. Pathen till filen är unik för varje dator, så den bör kollas när man updaterar projektet från github." />
+    <MESSAGE value="aaaa2" />
+    <MESSAGE value="fått bort &quot;SeatingChartBooking-1.0-SNAPSHOT/&quot; från adressen." />
+    <MESSAGE value="JSON till Javascript och utskrivet i HTML consol." />
+    <MESSAGE value="JSON till Javascript och utskrivet i HTML consol.2" />
+    <MESSAGE value="Ny Json med fasta platser(vissa frågetecken kvar)" />
+    <MESSAGE value="stavfel" />
+    <MESSAGE value="bokningsdata visas korrekt" />
+    <MESSAGE value="Förmiddag har ö igen, bakgrunden fixad" />
+    <MESSAGE value="basic crud" />
+    <MESSAGE value="ännu bättre crud" />
+    <MESSAGE value="ännu ännu bättre crud" />
+    <MESSAGE value="über crud" />
+    <MESSAGE value="Korrupta bokningar loggas + error meddelande när man bokar fel." />
+    <MESSAGE value="Tillgång till errorlogg från admin sidan." />
+    <MESSAGE value="småfix" />
+    <MESSAGE value="prutt" />
+    <MESSAGE value="lite småskit" />
+    <MESSAGE value="all datahantering inter ÄNTLIGEN!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="all datahantering inter ÄNTLIGEN!!" />
+  </component>
+</project>

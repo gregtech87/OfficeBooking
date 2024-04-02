@@ -1,0 +1,99 @@
+Index: src/main/webapp/index.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page contentType=\"text/html; charset=UTF-8\" pageEncoding=\"UTF-8\" %>\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Tieto Booking</title>\r\n    <link rel=\"icon\" href=\"image/favicon-purple.ico\">\r\n    <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\">\r\n    <style>\r\n\r\n    </style>\r\n    <script defer src=\"reNameLater.js\"></script>\r\n\r\n</head>\r\n<body class=\"body\">\r\n\r\n<div class=\"banner\">\r\n    <%--        logga       --%>\r\n    <img alt=\"image1\" src=\"image/tietoevryLogoWhite.png\" width=\"250\" class=\"logo\">\r\n</div>\r\n<img alt=\"image3\" src=\"image/background.jpg\" class=\"background\" >\r\n\r\n<%--        Popup bord formuläret      --%>\r\n<div id=\"booking-popup\" class=\"popup\" style=\"display: none\" >\r\n    <h2 id=\"popup-Heading\">Bokning av Kontorsplats</h2>\r\n\r\n    <form action=\"hello-servlet\" method=\"post\">\r\n        <input type=\"text\"  name=\"nameTable\" id=\"name\" placeholder=\"Namn\">\r\n        <label for=\"dateInput\">Datum:</label>\r\n        <input type=\"date\" name=\"dateInputTable\" id=\"dateInput\"><br><br>\r\n        <label for=\"startTimeInput\" id=\"startTimeID\">Starttid:</label>\r\n        <label for=\"endTimeInput\" id=\"stopTimeID\">Sluttid:</label>\r\n        <br>\r\n        <input type=\"time\" name=\"startTimeInputTable\" id=\"startTimeInput\">\r\n        <input type=\"time\" name=\"endTimeInputTable\" id=\"endTimeInput\"><br><br>\r\n        <button type=\"submit\" class=\"booking\">Boka</button>\r\n        <button type=\"reset\" class=\"cancel\" onclick=\"cancelTablePopup()\">Avbryt</button>\r\n    </form>\r\n</div>\r\n\r\n<%--        Popup rum formuläret      --%>\r\n<div id=\"roomBooking-popup\" class=\"roomPopup\" style=\"display: none\" >\r\n    <h2 id=\"roomPopup-Heading\">Bokning av Rum</h2>\r\n    <form action=\"hello-servlet\" method=\"post\">\r\n        <input type=\"text\" name=\"nameRoom\" id=\"name2\" placeholder=\"Namn\">\r\n        <label for=\"dateInput\">Datum:</label>\r\n        <input type=\"date\" name=\"dateInputRoom\" id=\"dateInput2\"><br><br>\r\n        <label for=\"startTimeInput\" id=\"startTimeID2\">Starttid:</label>\r\n        <label for=\"endTimeInput\" id=\"stopTimeID2\">Sluttid:</label><br>\r\n        <input type=\"time\" name=\"startTimeInputRoom\" id=\"startTimeInput2\">\r\n        <input type=\"time\" name=\"endTimeInputRoom\" id=\"endTimeInput2\"><br><br>\r\n        <button type=\"submit\" class=\"booking\">Boka</button>\r\n        <button type=\"reset\" class=\"cancel\" onclick=\"cancelRoomPopup()\">Avbryt</button>\r\n    </form>\r\n</div>\r\n\r\n<%--       Layout      --%>\r\n<div id=\"layout\" class=\"layout\">\r\n    <%--        logga       --%>\r\n    <img alt=\"image2\" src=\"image/superkontoret%20utan%20logo.png\" width=\"1228\" height=\"868\" class=\"karta\">\r\n\r\n    <%--        Stående borden övre delen       --%>\r\n    <input type=\"button\" class=\"tableButton\" id=\"id1\" name=\"1\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id2\" name=\"2\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id3\" name=\"3\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id4\" name=\"4\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id5\" name=\"5\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id6\" name=\"6\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id7\" name=\"7\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id8\" name=\"8\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id9\" name=\"9\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id10\" name=\"10\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id11\" name=\"11\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id12\" name=\"12\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id13\" name=\"13\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id14\" name=\"14\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id15\" name=\"15\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id16\" name=\"16\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id17\" name=\"17\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id18\" name=\"18\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id19\" name=\"19\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id20\" name=\"20\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id21\" name=\"21\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id22\" name=\"22\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id23\" name=\"23\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id24\" name=\"24\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id25\" name=\"25\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id26\" name=\"26\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id27\" name=\"27\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <%--        45 graders borden       --%>\r\n    <input type=\"button\" class=\"tableButton\" id=\"id28\" name=\"28\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id29\" name=\"29\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id30\" name=\"30\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id31\" name=\"31\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id32\" name=\"32\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id33\" name=\"33\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id34\" name=\"34\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id35\" name=\"35\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <%--        liggande borden     --%>\r\n    <input type=\"button\" class=\"tableButton\" id=\"id36\" name=\"36\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id37\" name=\"37\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id38\" name=\"38\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id39\" name=\"39\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id40\" name=\"40\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id41\" name=\"41\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id42\" name=\"42\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id43\" name=\"43\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id44\" name=\"44\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id45\" name=\"45\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id46\" name=\"46\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id47\" name=\"47\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id48\" name=\"48\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id49\" name=\"49\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id50\" name=\"50\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id51\" name=\"51\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <%--        Stående borden nedre delen       --%>\r\n    <input type=\"button\" class=\"tableButton\" id=\"id52\" name=\"52\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id53\" name=\"53\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id54\" name=\"54\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id55\" name=\"55\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id56\" name=\"56\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id57\" name=\"57\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <input type=\"button\" class=\"tableButton\" id=\"id58\" name=\"58\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id59\" name=\"59\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id60\" name=\"60\" onclick=\"tableBooking(this.name)\">\r\n    <input type=\"button\" class=\"tableButton\" id=\"id61\" name=\"61\" onclick=\"tableBooking(this.name)\">\r\n\r\n    <%--      Alla  Rum       --%>\r\n    <input type=\"button\" class=\"roomButtonTop\" id=\"roomId1\" name=\"Telesto\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonTop\" id=\"roomId2\" name=\"Europa\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonMiddle\" id=\"roomId3\" name=\"Titan\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonMiddle\" id=\"roomId4\" name=\"Triton\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonMiddleBottom\" id=\"roomId5\" name=\"Sedna\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonBottom\" id=\"roomId6\" name=\"Pluto\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonBottom\" id=\"roomId7\" name=\"Eris\" onclick=\"roomBooking(this.name)\">\r\n    <input type=\"button\" class=\"roomButtonBottom\" id=\"roomId8\" name=\"Io\" onclick=\"roomBooking(this.name)\">\r\n\r\n</div>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/src/main/webapp/index.jsp b/src/main/webapp/index.jsp
+--- a/src/main/webapp/index.jsp	
++++ b/src/main/webapp/index.jsp	
+@@ -19,44 +19,46 @@
+ </div>
+ <img alt="image3" src="image/background.jpg" class="background" >
+ 
+-<%--        Popup bord formuläret      --%>
+-<div id="booking-popup" class="popup" style="display: none" >
+-    <h2 id="popup-Heading">Bokning av Kontorsplats</h2>
++<%--       Layout      --%>
++<div id="layout" class="layout">
++
++    <%--        Popup bord formuläret      --%>
++    <div id="booking-popup" class="popup" style="display: none" >
++        <h2 id="popup-Heading">Bokning av Kontorsplats</h2>
+ 
+-    <form action="hello-servlet" method="post">
+-        <input type="text"  name="nameTable" id="name" placeholder="Namn">
+-        <label for="dateInput">Datum:</label>
+-        <input type="date" name="dateInputTable" id="dateInput"><br><br>
+-        <label for="startTimeInput" id="startTimeID">Starttid:</label>
+-        <label for="endTimeInput" id="stopTimeID">Sluttid:</label>
+-        <br>
+-        <input type="time" name="startTimeInputTable" id="startTimeInput">
+-        <input type="time" name="endTimeInputTable" id="endTimeInput"><br><br>
+-        <button type="submit" class="booking">Boka</button>
+-        <button type="reset" class="cancel" onclick="cancelTablePopup()">Avbryt</button>
+-    </form>
+-</div>
++        <form action="hello-servlet" method="post">
++            <input type="text"  name="nameTable" id="name" placeholder="Namn">
++            <label for="dateInput">Datum:</label>
++            <input type="date" name="dateInputTable" id="dateInput"><br><br>
++            <label for="startTimeInput" id="startTimeID">Starttid:</label>
++            <label for="endTimeInput" id="stopTimeID">Sluttid:</label>
++            <br>
++            <input type="time" name="startTimeInputTable" id="startTimeInput">
++            <input type="time" name="endTimeInputTable" id="endTimeInput"><br><br>
++            <button type="submit" class="booking">Boka</button>
++            <button type="reset" class="cancel" onclick="cancelTablePopup()">Avbryt</button>
++        </form>
++    </div>
+ 
+-<%--        Popup rum formuläret      --%>
+-<div id="roomBooking-popup" class="roomPopup" style="display: none" >
+-    <h2 id="roomPopup-Heading">Bokning av Rum</h2>
+-    <form action="hello-servlet" method="post">
+-        <input type="text" name="nameRoom" id="name2" placeholder="Namn">
+-        <label for="dateInput">Datum:</label>
+-        <input type="date" name="dateInputRoom" id="dateInput2"><br><br>
+-        <label for="startTimeInput" id="startTimeID2">Starttid:</label>
+-        <label for="endTimeInput" id="stopTimeID2">Sluttid:</label><br>
+-        <input type="time" name="startTimeInputRoom" id="startTimeInput2">
+-        <input type="time" name="endTimeInputRoom" id="endTimeInput2"><br><br>
+-        <button type="submit" class="booking">Boka</button>
+-        <button type="reset" class="cancel" onclick="cancelRoomPopup()">Avbryt</button>
+-    </form>
+-</div>
++    <%--        Popup rum formuläret      --%>
++    <div id="roomBooking-popup" class="roomPopup" style="display: none" >
++        <h2 id="roomPopup-Heading">Bokning av Rum</h2>
++        <form action="hello-servlet" method="post">
++            <input type="text" name="nameRoom" id="name2" placeholder="Namn">
++            <label for="dateInput">Datum:</label>
++            <input type="date" name="dateInputRoom" id="dateInput2"><br><br>
++            <label for="startTimeInput" id="startTimeID2">Starttid:</label>
++            <label for="endTimeInput" id="stopTimeID2">Sluttid:</label><br>
++            <input type="time" name="startTimeInputRoom" id="startTimeInput2">
++            <input type="time" name="endTimeInputRoom" id="endTimeInput2"><br><br>
++            <button type="submit" class="booking">Boka</button>
++            <button type="reset" class="cancel" onclick="cancelRoomPopup()">Avbryt</button>
++        </form>
++    </div>
+ 
+-<%--       Layout      --%>
+-<div id="layout" class="layout">
+-    <%--        logga       --%>
+-    <img alt="image2" src="image/superkontoret%20utan%20logo.png" width="1228" height="868" class="karta">
++    <%--        karta       --%>
++
++    <img alt="image2" src="image/superkontoret%20utan%20logo.png" width="68%" class="karta">
+ 
+     <%--        Stående borden övre delen       --%>
+     <input type="button" class="tableButton" id="id1" name="1" onclick="tableBooking(this.name)">
+@@ -148,7 +150,6 @@
+     <input type="button" class="roomButtonBottom" id="roomId6" name="Pluto" onclick="roomBooking(this.name)">
+     <input type="button" class="roomButtonBottom" id="roomId7" name="Eris" onclick="roomBooking(this.name)">
+     <input type="button" class="roomButtonBottom" id="roomId8" name="Io" onclick="roomBooking(this.name)">
+-
+ </div>
+ </body>
+ </html>
+\ No newline at end of file

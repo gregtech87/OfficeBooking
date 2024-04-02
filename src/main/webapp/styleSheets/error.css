@@ -1,0 +1,134 @@
+.dataTable {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: normal;
+    background-color: #26222e;
+    top: 10%;
+    left: 1%;
+    width: 48%;
+    height: 80%;
+    padding-left: 0.5%;
+    color: white;
+    text-align: center;
+    border: 5px solid black;
+    z-index: 2;
+    overflow: auto;
+}
+
+.dataTable2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: normal;
+    background-color: #26222e;
+    top: 10%;
+    left: 50%;
+    width: 48%;
+    height: 80%;
+    padding-left: 0.5%;
+    color: white;
+    text-align: center;
+    border: 5px solid black;
+    z-index: 2;
+    overflow: auto;
+}
+
+.backButton {
+    z-index: 55;
+    position: absolute;
+    top: 7%;
+    left: 36%;
+}
+
+th {
+    background-color: #8b15a7;
+}
+
+.table-sortable th {
+    cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+    content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+    content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+    overflow: hidden
+}
+
+tr {
+    transition: all 4s ease-in
+}
+
+tr:hover {
+    background-color: #EEE;
+    cursor: pointer
+}
+
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-width: 768px) and (min-resolution: 144dpi) {
+
+    .backButton {
+        z-index: 55 !important;
+        position: absolute !important;
+        top: 8% !important;
+        left: 45% !important;
+        background-color: #eacbbb !important;
+    }
+
+    .dataTable2 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: normal;
+        background-color: #26222e;
+        top: 13%;
+        left: 50%;
+        width: 48%;
+        height: 81%;
+        padding-left: 0.5%;
+        color: white;
+        text-align: center;
+        border: 5px solid black;
+        z-index: 2;
+        overflow: auto;
+    }
+
+    .dataTable {
+        position: absolute !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: normal !important;
+        background-color: #26222e !important;
+        top: 13% !important;
+        left: 1% !important;
+        width: 47% !important;
+        padding-left: 0.5% !important;
+        color: white !important;
+        text-align: center !important;
+        border: 5px solid black !important;
+        z-index: 2 !important;
+        overflow: auto !important;
+        height: 81% !important;
+    }
+}
