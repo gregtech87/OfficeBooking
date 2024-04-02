@@ -1,6 +1,6 @@
-package com.example.seatingchartbooking;
+package com.example.officebooking;
 
-import com.example.seatingchartbooking.jsonStuff.JsonToClient;
+import com.example.officebooking.jsonStuff.JsonToClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;

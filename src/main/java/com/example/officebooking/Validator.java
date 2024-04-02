@@ -1,8 +1,8 @@
-package com.example.seatingchartbooking;
+package com.example.officebooking;
 
-import com.example.seatingchartbooking.jsonStuff.CorruptItemToJson;
-import com.example.seatingchartbooking.jsonStuff.RoomToJson;
-import com.example.seatingchartbooking.jsonStuff.TableToJson;
+import com.example.officebooking.jsonStuff.CorruptItemToJson;
+import com.example.officebooking.jsonStuff.RoomToJson;
+import com.example.officebooking.jsonStuff.TableToJson;
 
 import java.io.IOException;
 import java.util.ArrayList;

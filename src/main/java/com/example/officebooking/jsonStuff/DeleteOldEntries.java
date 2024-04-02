@@ -1,7 +1,7 @@
-package com.example.seatingchartbooking.jsonStuff;
+package com.example.officebooking.jsonStuff;
 
 
-import com.example.seatingchartbooking.*;
+import com.example.officebooking.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

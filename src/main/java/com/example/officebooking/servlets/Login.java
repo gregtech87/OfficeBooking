@@ -1,6 +1,6 @@
-package com.example.seatingchartbooking.servlets;
+package com.example.officebooking.servlets;
 
-import com.example.seatingchartbooking.LoginValidator;
+import com.example.officebooking.LoginValidator;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

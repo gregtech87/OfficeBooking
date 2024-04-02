@@ -1,9 +1,6 @@
-package com.example.seatingchartbooking.servlets;
+package com.example.officebooking.servlets;
 
-import com.example.seatingchartbooking.LoginValidator;
-import com.example.seatingchartbooking.jsonStuff.AdminToJson;
-import com.example.seatingchartbooking.jsonStuff.CorruptItemToJson;
-import jakarta.servlet.RequestDispatcher;
+import com.example.officebooking.jsonStuff.AdminToJson;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

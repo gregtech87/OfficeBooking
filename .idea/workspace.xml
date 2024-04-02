@@ -2,14 +2,37 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SeatingChartBooking:war exploded" />
+      <artifact name="OfficeBooking:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8f271c7-01ca-4733-852f-489e777714f8" name="Changes" comment="all datahantering inter ÄNTLIGEN!!" />
+    <list default="true" id="b8f271c7-01ca-4733-852f-489e777714f8" name="Changes" comment="all datahantering inter ÄNTLIGEN!!">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/DataCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/DataCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/LoginValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/LoginValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/AdminToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/AdminToJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/CorruptItemToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/CorruptItemToJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/DeleteOldEntries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/DeleteOldEntries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/JsonToClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/JsonToClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/PermanentSeatsToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/PermanentSeatsToJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/RoomToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/RoomToJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/jsonStuff/TableToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/jsonStuff/TableToJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/servlets/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/servlets/AdminPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/servlets/ChangeAdminPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/servlets/ChangeAdminPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/servlets/DataFromHtmlToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/servlets/DataFromHtmlToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/servlets/DataFromServerAndLoadThePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/servlets/DataFromServerAndLoadThePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/servlets/ErrorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/servlets/ErrorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/seatingchartbooking/servlets/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/officebooking/servlets/Login.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,15 +107,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Beast/IdeaProjects/SeatingChartBooking",
+    "last_opened_file_path": "C:/Users/Beast/IdeaProjects/OfficeBooking",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "DockerRegistry",
     "vue.rearranger.settings.migration": "true"
   }
@@ -118,14 +141,12 @@
       <recent name="com.example.seatingchartbooking" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.uggabugga">
-    <configuration name="GlassFish 7.0.3" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.3" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="20" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+  <component name="RunManager" selected="GlassFish Server.GlassFish 7.0.3">
+    <configuration name="GlassFish 7.0.3" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 7.0.3" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="$USER_HOME$/.jdks/temurin-17.0.8.1" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="SeatingChartBooking:war exploded">
-          <settings>
-            <option name="defaultContextRoot" value="false" />
-          </settings>
+        <artifact name="OfficeBooking:war exploded">
+          <settings />
         </artifact>
       </deployment>
       <server-settings>
@@ -188,7 +209,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="SeatingChartBooking:war exploded" />
+          <artifact name="OfficeBooking:war exploded" />
         </option>
       </method>
     </configuration>
@@ -392,6 +413,7 @@
       <workItem from="1708070973576" duration="19000" />
       <workItem from="1712092765756" duration="934000" />
       <workItem from="1712093778766" duration="115000" />
+      <workItem from="1712093937561" duration="2080000" />
     </task>
     <task id="LOCAL-00001" summary="bye bye">
       <created>1681826189770</created>

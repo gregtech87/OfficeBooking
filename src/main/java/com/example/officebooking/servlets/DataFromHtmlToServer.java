@@ -1,10 +1,9 @@
-package com.example.seatingchartbooking.servlets;
+package com.example.officebooking.servlets;
 
 import java.io.*;
 import java.text.ParseException;
 
-import com.example.seatingchartbooking.*;
-import com.example.seatingchartbooking.jsonStuff.CorruptItemToJson;
+import com.example.officebooking.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;

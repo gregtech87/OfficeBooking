@@ -1,6 +1,6 @@
-package com.example.seatingchartbooking.jsonStuff;
+package com.example.officebooking.jsonStuff;
 
-import com.example.seatingchartbooking.Admin;
+import com.example.officebooking.Admin;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;

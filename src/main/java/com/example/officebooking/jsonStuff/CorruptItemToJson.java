@@ -1,7 +1,7 @@
-package com.example.seatingchartbooking.jsonStuff;
+package com.example.officebooking.jsonStuff;
 
-import com.example.seatingchartbooking.Room;
-import com.example.seatingchartbooking.Table;
+import com.example.officebooking.Room;
+import com.example.officebooking.Table;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;

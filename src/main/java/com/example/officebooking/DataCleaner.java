@@ -1,6 +1,6 @@
-package com.example.seatingchartbooking;
+package com.example.officebooking;
 
-import com.example.seatingchartbooking.jsonStuff.DeleteOldEntries;
+import com.example.officebooking.jsonStuff.DeleteOldEntries;
 
 import java.util.Calendar;
 import java.util.Timer;

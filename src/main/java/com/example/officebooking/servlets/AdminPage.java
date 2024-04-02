@@ -1,10 +1,10 @@
-package com.example.seatingchartbooking.servlets;
+package com.example.officebooking.servlets;
 
 import java.io.*;
 
-import com.example.seatingchartbooking.jsonStuff.AdminToJson;
-import com.example.seatingchartbooking.jsonStuff.JsonToClient;
-import com.example.seatingchartbooking.jsonStuff.PermanentSeatsToJson;
+import com.example.officebooking.jsonStuff.AdminToJson;
+import com.example.officebooking.jsonStuff.JsonToClient;
+import com.example.officebooking.jsonStuff.PermanentSeatsToJson;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;

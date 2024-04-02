@@ -1,12 +1,10 @@
-package com.example.seatingchartbooking.servlets;
+package com.example.officebooking.servlets;
 
 import java.io.*;
-import com.example.seatingchartbooking.DataCleaner;
-import com.example.seatingchartbooking.LoginValidator;
-import com.example.seatingchartbooking.jsonStuff.AdminToJson;
-import com.example.seatingchartbooking.jsonStuff.CorruptItemToJson;
-import com.example.seatingchartbooking.jsonStuff.DeleteOldEntries;
-import com.example.seatingchartbooking.jsonStuff.JsonToClient;
+import com.example.officebooking.DataCleaner;
+import com.example.officebooking.LoginValidator;
+import com.example.officebooking.jsonStuff.CorruptItemToJson;
+import com.example.officebooking.jsonStuff.JsonToClient;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;

@@ -1,4 +1,4 @@
-package com.example.seatingchartbooking;
+package com.example.officebooking;
 
 public class Admin {
 

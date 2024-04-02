@@ -1,8 +1,8 @@
-package com.example.seatingchartbooking.jsonStuff;
+package com.example.officebooking.jsonStuff;
 
-import com.example.seatingchartbooking.Admin;
-import com.example.seatingchartbooking.Room;
-import com.example.seatingchartbooking.Table;
+import com.example.officebooking.Admin;
+import com.example.officebooking.Room;
+import com.example.officebooking.Table;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
